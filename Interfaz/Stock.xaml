@@ -1,0 +1,23 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Interfaz.Stock"
+	x:Name="Window"
+	Title="Añadir a Stock"
+	Width="640" Height="480" Loaded="Window_Loaded">
+
+	<Grid x:Name="LayoutRoot">
+		<Label Content="Código Artículo" HorizontalAlignment="Left" Height="29" Margin="139,18,0,0" VerticalAlignment="Top" Width="93"/>
+		<ComboBox x:Name="cmbCódigoArtículo" Height="21" Margin="139,47,382,0" VerticalAlignment="Top" IsEditable="True" IsReadOnly="True" SelectionChanged="cmbCódigoArtículo_SelectionChanged" TabIndex="0" IsTabStop="True" />
+		<Label Content="Marca" HorizontalAlignment="Left" Height="29" Margin="331,18,0,0" VerticalAlignment="Top" Width="93"/>
+		<ComboBox x:Name="cmbMarca" Height="21" Margin="331,47,119,0" VerticalAlignment="Top" IsEditable="True" IsReadOnly="False" SelectionChanged="cmbMarca_SelectionChanged" KeyUp="cmbMarca_KeyUp" TabIndex="1" IsTabStop="True" />
+		<Label Content="Cantidad a ingresar" Height="29" Margin="238,0,267,147" VerticalAlignment="Bottom" Name="lblCantidad" />
+		<TextBox x:Name="txtCantidad" Margin="255,0,276,120" TextWrapping="Wrap" Height="21" VerticalAlignment="Bottom" TabIndex="4" />
+		<Label Content="Producto" HorizontalAlignment="Left" Height="29" Margin="331,78,0,0" VerticalAlignment="Top" Width="93"/>
+		<ComboBox x:Name="cmbProducto" Height="21" Margin="331,107,119,0" VerticalAlignment="Top" IsEditable="True" IsReadOnly="False" SelectionChanged="cmbProducto_SelectionChanged" TabIndex="2" IsTabStop="True" KeyUp="cmbProducto_KeyUp" />
+		<Button Content="Ingresar Artículos al Stock" Height="35" Margin="217,0,220,26" VerticalAlignment="Bottom" Name="btnIngresar" Click="btnIngresar_Click" TabIndex="5" />
+		<Label Content="Capacidad" HorizontalAlignment="Left" Margin="331,144,0,269" Width="93"/>
+		<ComboBox x:Name="cmbCapacidad" Height="21" Margin="331,0,119,248" VerticalAlignment="Bottom" IsEditable="True" IsReadOnly="False" TabIndex="3" IsTabStop="True" SelectionChanged="cmbCapacidad_SelectionChanged" KeyUp="cmbCapacidad_KeyUp" />
+		<Label Content="Del artículo seleccionado hay en stock:" Height="29" Margin="188,0,161,77" VerticalAlignment="Bottom" Name="lblStock" />
+    </Grid>
+</Window>

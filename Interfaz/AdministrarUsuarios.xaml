@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Interfaz.AdministrarUsuarios"
+        Title="Usuarios" Height="489" Width="574" Loaded="Window_Loaded">
+	<Window.Resources>
+		<ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+			<WrapPanel/>
+		</ItemsPanelTemplate>
+	</Window.Resources>
+    <Grid>
+        <TabControl Height="451" HorizontalAlignment="Left" x:Name="tabControl1" VerticalAlignment="Top" Width="550" Margin="2,0,0,0">
+            <TabItem Header="Usuarios registrados" x:Name="tabUsuarios">
+                <Grid Width="543">
+                    <ListView x:Name="listUsuarios" Margin="4,3,0,33" ItemsPanel="{DynamicResource ItemsPanelTemplate1}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Width="531" />
+                    <Label Content="Eliminar Usuario" Margin="437,0,7.173,5" x:Name="lblEliminar" d:LayoutOverrides="Width" Height="28" VerticalAlignment="Bottom" MouseDown="lblEliminar_MouseDown" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Nuevo Usuario" x:Name="tabNuevo">
+                <Grid>
+                    <Label Content="Contraseña" Height="28" HorizontalAlignment="Left" Margin="151,113,0,0" x:Name="label1" VerticalAlignment="Top" />
+                    <TextBox Height="23" Margin="151,84,219,0" x:Name="txtNombre" VerticalAlignment="Top" />
+                    <Label Content="Usuario" Height="28" HorizontalAlignment="Left" Margin="153,58,0,0" x:Name="label2" VerticalAlignment="Top" />
+                    <Label Content="E-mail para mandar contraseña" Height="28" Margin="153,167,220.016,0" x:Name="label3" VerticalAlignment="Top" d:LayoutOverrides="Width" />
+                    <TextBox Margin="153,193,217,203.04" x:Name="txtMail" />
+                    <ComboBox Height="23" Margin="153,254,156,0" x:Name="cmbNivel" VerticalAlignment="Top" />
+                    <Label Content="Alcance de Seguridad" Height="28" Margin="151,0,272.35,169.04" x:Name="label4" VerticalAlignment="Bottom" d:LayoutOverrides="Width" />
+                    <Button Content="Guardar Usuario" Height="23" Margin="207,298,217,0" x:Name="btnGuardar" VerticalAlignment="Top" Click="btnGuardar_Click" />
+                    <TextBox Height="23" Margin="153,139,217,0" x:Name="txtPass" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

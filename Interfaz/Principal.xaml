@@ -1,0 +1,45 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Interfaz.Principal"
+	x:Name="Window"
+	Title="Principal"
+	Width="227" Height="480" Closed="Window_Closed" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+	<Window.Resources>
+		<Storyboard x:Key="mouseEnterlblClientes">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="lblClientes">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF0D10FD"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="mouseEnterlblProductos">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="lblProductos">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF0D10FD"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="lblClientes">
+			<BeginStoryboard x:Name="mouseEnterlblClientes_BeginStoryboard" Storyboard="{StaticResource mouseEnterlblClientes}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="lblProductos">
+			<BeginStoryboard x:Name="mouseEnterlblProductos_BeginStoryboard" Storyboard="{StaticResource mouseEnterlblProductos}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="lblProductos">
+			<StopStoryboard BeginStoryboardName="mouseEnterlblProductos_BeginStoryboard"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="lblClientes">
+			<StopStoryboard BeginStoryboardName="mouseEnterlblClientes_BeginStoryboard"/>
+		</EventTrigger>
+	</Window.Triggers>
+
+	<Grid x:Name="LayoutRoot">
+		<Label Content="Clientes" Height="27" Margin="38,34,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="123" Name="lblClientes" MouseLeftButtonDown="lblClientes_MouseLeftButtonDown" />
+		<Label Height="27" Margin="38,68,0,0" VerticalAlignment="Top" Content="Productos" HorizontalAlignment="Left" Width="123" Name="lblProductos" MouseLeftButtonDown="lblProductos_MouseLeftButtonDown" />
+		<Label Content="Ventas de hoy" Height="27" Margin="38,102,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="123" Name="lblVentas" MouseLeftButtonDown="lblVentas_MouseLeftButtonDown" />
+		<Label Content="Stock" Height="27" Margin="38,136,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="123" Name="lblStock" MouseLeftButtonDown="lblStock_MouseLeftButtonDown" />
+		<Label Content="Pagos" Height="27" Margin="38,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="123" Name="lblPagos" MouseLeftButtonDown="lblPagos_MouseLeftButtonDown" />
+        <Label Content="Cuentas de clientes" Height="26" HorizontalAlignment="Left" Margin="38,252,0,0" Name="lblCuentas" VerticalAlignment="Top" Width="123" MouseLeftButtonDown="lblCuentas_MouseLeftButtonDown" />
+        <Label Content="Administrar Usuarios" Height="26" HorizontalAlignment="Left" Margin="38,318,0,0" Name="lblAdministrarUsuarios" VerticalAlignment="Top" Width="123" MouseDown="lblAdministrarUsuarios_MouseDown" />
+        <Label Content="Promedio de ventas" Height="28" HorizontalAlignment="Left" Margin="38,284,0,0" Name="label1" VerticalAlignment="Top" Width="123" MouseLeftButtonDown="label1_MouseLeftButtonDown" />
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procesos de negocio", "Sistema Ventas Peluquería\Procesos de negocio.csproj", "{AE3839AF-ABF4-43FD-A756-08AD9FED3E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz", "Interfaz\Interfaz.csproj", "{7FB18DFD-3569-499C-959C-A7DE78C76A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE3839AF-ABF4-43FD-A756-08AD9FED3E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3839AF-ABF4-43FD-A756-08AD9FED3E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3839AF-ABF4-43FD-A756-08AD9FED3E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3839AF-ABF4-43FD-A756-08AD9FED3E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB18DFD-3569-499C-959C-A7DE78C76A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB18DFD-3569-499C-959C-A7DE78C76A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB18DFD-3569-499C-959C-A7DE78C76A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB18DFD-3569-499C-959C-A7DE78C76A04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

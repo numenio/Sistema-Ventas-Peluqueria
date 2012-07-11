@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Win-G\Documents\Visual Studio 2008\Projects\Sistema Ventas Peluquería\Sistema Ventas Peluquería\Procesos de negocio.csproj
+-----------------------------------------------------------------------------------------------------------------------------------
+Estableciendo valor de <ExpressionBlendVersion> en '4.0.20621.0'
+Actualizando ToolsVersion de '3.5' a '4.0'
+Guardando archivo
+
+
+-------------------------------------------------------------------------------------------------------
+C:\Users\Win-G\Documents\Visual Studio 2008\Projects\Sistema Ventas Peluquería\Interfaz\Interfaz.csproj
+-------------------------------------------------------------------------------------------------------
+Estableciendo valor de <ExpressionBlendVersion> en '4.0.20621.0'
+Actualizando ToolsVersion de '3.5' a '4.0'
+Guardando archivo
+
+
+------------------------------------------------------------------------------------------------------------
+C:\Users\Win-G\Documents\Visual Studio 2008\Projects\Sistema Ventas Peluquería\Sistema Ventas Peluquería.sln
+------------------------------------------------------------------------------------------------------------
+Estableciendo encabezado de formato de solución en 'Microsoft Visual Studio Solution File, Format Version 11.00'
+Guardando archivo
+
+

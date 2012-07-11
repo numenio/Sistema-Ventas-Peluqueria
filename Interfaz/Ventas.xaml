@@ -1,0 +1,70 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="Interfaz.Ventas"
+	x:Name="Window"
+	Title="Ventas de hoy"
+	Width="1050" Height="624" Loaded="Window_Loaded">
+
+	<Grid x:Name="LayoutRoot" Height="589">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="Cód Cliente" HorizontalAlignment="Left" Height="29" Margin="21,94,0,0" VerticalAlignment="Top" Width="93"/>
+		<ComboBox x:Name="cmbCódigoCliente" HorizontalAlignment="Left" Height="21" Margin="21,126,0,0" VerticalAlignment="Top" Width="69" IsEditable="True" KeyUp="cmbCódigoCliente_KeyUp" SelectionChanged="cmbCódigoCliente_SelectionChanged" IsReadOnly="False" TabIndex="0" KeyDown="cmbCódigoCliente_KeyDown" />
+		<Label Content="Cód Artículo" Height="29" Margin="21,166,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" d:LayoutOverrides="VerticalAlignment"/>
+		<ComboBox x:Name="cmbCódigoArtículo" Height="21" Margin="21,199,0,0" VerticalAlignment="Top" IsEditable="True" HorizontalAlignment="Left" Width="69" SelectionChanged="cmbCódigoArtículo_SelectionChanged" IsReadOnly="False" TabIndex="6" d:LayoutOverrides="VerticalAlignment" KeyUp="cmbCódigoArtículo_KeyUp" KeyDown="cmbCódigoArtículo_KeyDown" />
+		<Label Content="Nombre Cliente" HorizontalAlignment="Left" Height="29" Margin="108,94,0,0" VerticalAlignment="Top" Width="93"/>
+		<ComboBox x:Name="cmbNombreCliente" HorizontalAlignment="Left" Height="21" Margin="108,126,0,0" VerticalAlignment="Top" Width="218" IsEditable="True" KeyUp="cmbNombreCliente_KeyUp" SelectionChanged="cmbNombreCliente_SelectionChanged" IsReadOnly="False" TabIndex="1" KeyDown="cmbNombreCliente_KeyDown" />
+		<Label Content="Nombre Artículo" HorizontalAlignment="Left" Height="29" Margin="108,166,0,0" VerticalAlignment="Top" Width="103" d:LayoutOverrides="VerticalAlignment"/>
+		<ComboBox x:Name="cmbNombreArtículo" HorizontalAlignment="Right" Height="21" Margin="0,199,702,0" VerticalAlignment="Top" Width="219" IsEditable="True" IsReadOnly="False" SelectionChanged="cmbNombreArtículo_SelectionChanged" TabIndex="7" d:LayoutOverrides="VerticalAlignment" KeyUp="cmbNombreArtículo_KeyUp" KeyDown="cmbNombreArtículo_KeyDown" />
+		<Label Content="Cantidad" Height="29" Margin="338,166,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="71" d:LayoutOverrides="VerticalAlignment" />
+		<TextBox x:Name="txtCantidad" Height="21" Margin="338,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="8" GotFocus="txtCantidad_GotFocus" HorizontalAlignment="Left" Width="71" d:LayoutOverrides="VerticalAlignment" KeyDown="txtCantidad_KeyDown" />
+		<Label Content="Precio" Height="29" Margin="427,166,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" d:LayoutOverrides="VerticalAlignment"/>
+		<TextBox x:Name="txtPrecio" Height="21" Margin="427,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" TabIndex="9" GotFocus="txtPrecio_GotFocus" d:LayoutOverrides="VerticalAlignment" KeyDown="txtPrecio_KeyDown" />
+		<Label Content="Pagos (Haber)" Height="29" Margin="337,94,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
+		<TextBox x:Name="txtPagos" Height="21" Margin="338,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" TabIndex="2" GotFocus="txtPagos_GotFocus" KeyDown="txtPagos_KeyDown" />
+		<Label Content="Fecha de la Venta" Height="29" Margin="21,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="118" />
+		<Label Content="Hora de la Venta" Height="29" Margin="272,17,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+		<TextBox x:Name="txtHora" HorizontalAlignment="Left" Height="21" Margin="276,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TabIndex="4"/>
+		<TextBox x:Name="txtMinutos" HorizontalAlignment="Left" Height="21" Margin="327,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TabIndex="5"/>
+		<TextBlock HorizontalAlignment="Left" Height="21" Margin="318,49,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Width="4" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+			<TextBlock.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="-1"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBlock.RenderTransform>
+		</TextBlock>
+		<Custom:DatePicker x:Name="dateFechaVenta" Height="25" Margin="21,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237" TabIndex="3" SelectedDateFormat="Long"/>
+		<Button Content="Ingresar Venta" Height="35" Margin="262,317,0,0" VerticalAlignment="Top" x:Name="btnIngresarVenta" TabIndex="11" Click="btnIngresarVenta_Click" HorizontalAlignment="Left" Width="458"/>
+        <Custom:DataGrid x:Name="dataGridVentas" AutoGenerateColumns="false" ItemsSource="{Binding}" Height="156" HorizontalAlignment="Left" Margin="12,0,0,55" VerticalAlignment="Bottom" Width="1004" SelectionChanged="dataGridVentas_SelectionChanged" d:LayoutOverrides="VerticalAlignment">
+            <Custom:DataGrid.Columns>
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Nº" Binding="{Binding Nº}" MinWidth="50" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Cliente" Binding="{Binding Cliente}" MinWidth="170" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Detalle Compra" Binding="{Binding Detalle_compra}" MinWidth="600" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Debe" Binding="{Binding Debe}" MinWidth="60" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Haber" Binding="{Binding Haber}" MinWidth="60" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Saldo" Binding="{Binding Saldo}" MinWidth="60" />
+            </Custom:DataGrid.Columns>
+        </Custom:DataGrid>
+        <Label Content="Imprimir Venta" Height="28" HorizontalAlignment="Left" Margin="21,540,0,0" x:Name="label1" VerticalAlignment="Top" Width="140" MouseLeftButtonDown="label1_MouseLeftButtonDown" />
+        <Button Content="Ingresar Artículo --&gt;" Height="27" HorizontalAlignment="Left" Margin="524,196,0,0" x:Name="btnIngresarArtículo" VerticalAlignment="Top" Width="120" Click="btnIngresarArtículo_Click" TabIndex="10" d:LayoutOverrides="VerticalAlignment" />
+        <Custom:DataGrid x:Name="dataGridArtículos" AutoGenerateColumns="false" ItemsSource="{Binding}" Height="257" HorizontalAlignment="Left" Margin="649,40,0,0" VerticalAlignment="Top" Width="375">
+            <Custom:DataGrid.Columns>
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Artículo" Binding="{Binding Producto}" MinWidth="250" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Cantidad" Binding="{Binding Cantidad}" MinWidth="60" />
+                <Custom:DataGridTextColumn CanUserResize="true" Header="Precio" Binding="{Binding Precio}" MinWidth="60" />
+            </Custom:DataGrid.Columns>
+        </Custom:DataGrid>
+
+            <Label Content="Artículos incluídos en la Venta:" Height="25" HorizontalAlignment="Left" Margin="640,13,0,0" x:Name="label2" VerticalAlignment="Top" Width="182" />
+        <Label Content="Ventas ingresadas:" Height="31" HorizontalAlignment="Left" Margin="12,0,0,217" x:Name="label3" VerticalAlignment="Bottom" Width="164" />
+        <Label Content="Quitar Artículo" Height="28" HorizontalAlignment="Left" Margin="876,306,0,0" Name="lblQuitarArtículo" VerticalAlignment="Top" Width="140" FlowDirection="RightToLeft" MouseLeftButtonDown="btnEliminarArtículo_Click" />
+        <Label Content="Eliminar Venta" Height="28" HorizontalAlignment="Left" Margin="876,540,0,0" Name="lblEliminarVenta" VerticalAlignment="Top" Width="140" FlowDirection="RightToLeft" MouseLeftButtonDown="btnEliminarVenta_Click" />
+    </Grid>
+</Window>

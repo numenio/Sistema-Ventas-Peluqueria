@@ -1,0 +1,13 @@
+﻿<Window x:Class="Interfaz.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Seguridad" Height="300" Width="300" Closed="Window_Closed" Loaded="Window_Loaded" KeyDown="Window_KeyDown">
+    <Grid>
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="48,105,0,0" Name="passBoxContraseña" VerticalAlignment="Top" Width="176" TabIndex="1" />
+        <Label Content="Contraseña" Height="28" HorizontalAlignment="Left" Margin="46,80,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBlock Height="40" HorizontalAlignment="Left" Margin="78,209,0,0" Name="lblOlvido" Text="¿Olvidó su contraseña? Escriba su usuario y haga clic aquí" VerticalAlignment="Top" Width="188" TextWrapping="Wrap" TextAlignment="Right" MouseDown="lblOlvido_MouseDown" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="46,42,0,0" Name="txtNombre" VerticalAlignment="Top" Width="178" TabIndex="0" />
+        <Label Content="Usuario" Height="28" HorizontalAlignment="Left" Margin="46,16,0,0" Name="label2" VerticalAlignment="Top" />
+        <Button Content="Ingresar" Height="23" HorizontalAlignment="Left" Margin="78,152,0,0" Name="btnIngresar" VerticalAlignment="Top" Width="124" Click="btnIngresar_Click" TabIndex="2" />
+    </Grid>
+</Window>

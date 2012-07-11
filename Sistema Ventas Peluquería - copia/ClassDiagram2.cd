@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SistemaPeluquería.AdminData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAEgAAQAAAAECICQmABAAAEAAoQBAAJAAAQAIAAAAA=</HashCode>
+      <FileName>AdminData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Articulos" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAABBAAACAAAAyAAQIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Articulos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Clientes" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQAAGUAABAAACCAAAAiACAQAAAQAHIAAAAAoAA=</HashCode>
+      <FileName>Clientes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.frmVentas" Collapsed="true">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAAACEAADAEAFgEAECAAAESAIAAQCAEATIMAAAAAII=</HashCode>
+      <FileName>frmVentas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.MDIPadre" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aIAQAAAAoCEAABIAAACABAACQBASAAgIAAEAAYBAAAE=</HashCode>
+      <FileName>MDIPadre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Pagos" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAABgAAASAAQACAAAIAAAAAEAAAAAAAAI=</HashCode>
+      <FileName>Pagos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Program" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Stock" Collapsed="true">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAABAAAACAAQECAQBAIIAAAEAAAAAABEA=</HashCode>
+      <FileName>Stock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Properties.Resources" Collapsed="true">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.Properties.Settings" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.artículo" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAARAAAAACAAAEQABAAAAEgABAAAAAAIEAAAAAgoQ=</HashCode>
+      <FileName>artículo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.cliente" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAREACBAiAAJAQAAAAAAAAAAIEIAggY=</HashCode>
+      <FileName>cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.teléfono" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAABAAACAAAAAAAAEAAAAgAAAAgA=</HashCode>
+      <FileName>teléfono.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.email" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACAAAAAECAAAgAAAAgA=</HashCode>
+      <FileName>email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.venta" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBABAAEAAAAAAAEAAEBAAAAQAkAAAAAEAAAAgAAAAkA=</HashCode>
+      <FileName>venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaPeluquería.pago" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAEAAABAAAEIAAAAAAAEAAAAgAAAAgA=</HashCode>
+      <FileName>pago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

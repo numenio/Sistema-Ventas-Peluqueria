@@ -1,0 +1,63 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="Interfaz.Clientes"
+	x:Name="Window"
+	Title="Clientes"
+	Width="640" Height="507" Loaded="Window_Loaded">
+
+	<Grid x:Name="LayoutRoot">
+        <TabControl Height="445" HorizontalAlignment="Left" Margin="5,12,0,0" Name="tabControl1" VerticalAlignment="Top" Width="606">
+            <TabItem Header="Ingresar un Cliente Nuevo" Name="tabItem1">
+                <Grid>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="35,47,0,0" Name="txtNombre" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="Nombre" Height="26" HorizontalAlignment="Left" Margin="35,20,0,0" VerticalAlignment="Top" Width="95" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="173,50,0,0" Name="txtApellido" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="Apellido" Height="26" HorizontalAlignment="Right" Margin="0,20,328,0" VerticalAlignment="Top" Width="95" />
+                    <TextBox Height="25" HorizontalAlignment="Right" Margin="0,50,168,0" Name="txtDirección" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="Dirección" Height="26" HorizontalAlignment="Right" Margin="0,20,192,0" VerticalAlignment="Top" Width="95" />
+                    <TextBox Height="25" HorizontalAlignment="Right" Margin="0,50,28,0" Name="txtLocalidad" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="Localidad" Height="26" HorizontalAlignment="Right" Margin="0,20,52,0" VerticalAlignment="Top" Width="95" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="309,123,0,0" Name="txtPeluquería" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="Peluquería" Height="26" HorizontalAlignment="Right" Margin="0,93,192,0" VerticalAlignment="Top" Width="95" />
+                    <TextBox Height="25" Margin="35,123,448,0" Name="txtTeléfono" TextWrapping="Wrap" VerticalAlignment="Top" />
+                    <Label Content="Teléfono" Height="26" HorizontalAlignment="Left" Margin="35,93,0,0" VerticalAlignment="Top" Width="95" />
+                    <Button Content="Agregar otro teléfono" FontSize="11" Height="23" HorizontalAlignment="Left" Margin="35,167,0,0" Name="btnAgregarTeléfono" VerticalAlignment="Top" Width="113" Click="btnAgregarTeléfono_Click" />
+                    <ListBox Height="83" Margin="35,208,448,0" Name="listBoxTeléfonos" VerticalAlignment="Top" />
+                    <TextBox Height="25" HorizontalAlignment="Right" Margin="0,123,304,0" Name="txtMail" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" />
+                    <Label Content="E-mail" Height="26" HorizontalAlignment="Right" Margin="0,93,328,0" VerticalAlignment="Top" Width="95" />
+                    <Button Content="Agregar otro e-mail" FontSize="11" Height="23" HorizontalAlignment="Right" Margin="0,167,304,0" Name="btnAgregarMail" VerticalAlignment="Top" Width="119" Click="btnAgregarMail_Click" />
+                    <ListBox Height="83" HorizontalAlignment="Right" Margin="0,208,304,0" Name="listBoxMail" VerticalAlignment="Top" Width="119" />
+                    <Button Content="Ingresar Cliente" Height="29" Margin="173,340,150,0" Name="btnIngresarCliente" VerticalAlignment="Top" Click="btnIngresarCliente_Click" />
+                    <Label Content="Fecha Nacimiento" Height="26" HorizontalAlignment="Left" Margin="449,93,0,0" VerticalAlignment="Top" Width="118" />
+                    <Label Content="Quitar teléfono" Height="26" HorizontalAlignment="Left" Margin="35,291,0,0" Name="lblQuitarTeléfono" VerticalAlignment="Top" Width="113" MouseDown="lblQuitarTeléfono_MouseLeftButtonDown" />
+                    <Label Content="Quitar e-mail" Height="26" HorizontalAlignment="Left" Margin="173,292,0,0" Name="lblMail" VerticalAlignment="Top" Width="113" MouseDown="lblMail_MouseLeftButtonDown" />
+                    <Button Content="Cancelar Modificar Cliente" Height="25" HorizontalAlignment="Left" Margin="199,377,0,0" Name="btnCancelarModificarCliente" VerticalAlignment="Top" Width="222" Click="btnCancelarModificarCliente_Click" />
+                    <TextBox Height="26" HorizontalAlignment="Left" Margin="454,122,0,0" Name="txtFechaNacimiento" VerticalAlignment="Top" Width="113" ToolTip="Escriba la fecha así: dd/mm/aaaa" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Clientes ya Ingresados" Name="tabItem2">
+                <Grid>
+                    <Custom:DataGrid AutoGenerateColumns="False" Height="164" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="10,39,0,0" Name="dataGridClientes" VerticalAlignment="Top" Width="580" SelectionChanged="dataGridClientes_SelectionChanged">
+                        <Custom:DataGrid.Columns>
+                            <Custom:DataGridTextColumn Binding="{Binding Nombre}" CanUserResize="true" Header="Nombre" MinWidth="100" />
+                            <Custom:DataGridTextColumn Binding="{Binding Apellido}" CanUserResize="true" Header="Apellido" MinWidth="100" />
+                            <Custom:DataGridTextColumn Binding="{Binding Dirección}" CanUserResize="true" Header="Dirección" MinWidth="100" />
+                            <Custom:DataGridTextColumn Binding="{Binding Localidad}" CanUserResize="true" Header="Localidad" MinWidth="100" />
+                            <Custom:DataGridTextColumn Binding="{Binding Peluquería}" CanUserResize="true" Header="Peluquería" MinWidth="100" />
+                            <Custom:DataGridTextColumn Binding="{Binding fecha_nacimiento}" CanUserResize="true" Header="Cumple" MinWidth="50" />
+                        </Custom:DataGrid.Columns>
+                    </Custom:DataGrid>
+                    <Label Content="Clientes:" Height="28" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Width="85" />
+                    <Label Content="Teléfonos del cliente:" Height="28" HorizontalAlignment="Right" Margin="0,256,402,0" VerticalAlignment="Top" Width="126" />
+                    <Label Content="E-mails del cliente:" Height="28" HorizontalAlignment="Right" Margin="0,256,155,0" VerticalAlignment="Top" Width="107" />
+                    <Label Content="Modificar cliente" FlowDirection="RightToLeft" Height="25" HorizontalAlignment="Left" Margin="352,211,0,0" Name="lblModificarCliente" VerticalAlignment="Top" Width="116" MouseLeftButtonDown="lblModificarCliente_MouseLeftButtonDown" />
+                    <Label Content="Eliminar cliente" FlowDirection="RightToLeft" Height="25" HorizontalAlignment="Right" Margin="0,211,6,0" Name="lblEliminarCliente" VerticalAlignment="Top" Width="116" MouseLeftButtonDown="lblEliminarCliente_MouseLeftButtonDown" />
+                    <ListBox Height="112" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="68,280,0,0" Name="listTeléfonos" VerticalAlignment="Top" Width="194" />
+                    <ListBox Height="112" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="334,280,0,0" Name="listMails" VerticalAlignment="Top" Width="194" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
